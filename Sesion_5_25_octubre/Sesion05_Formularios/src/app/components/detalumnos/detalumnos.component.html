@@ -1,0 +1,32 @@
+<p>Detalle del Alumno</p>
+<p>Busco el ID {{id}}</p>
+<p>Alumno es : {{oServ.getAlumno(id) | json }}</p>
+
+
+<form [formGroup]="alumnoForm"  (ngSubmit)="onSubmit()">
+    <label for="first-name">Nombre: </label>
+    <input id="first-name" type="text" formControlName="nombre">
+    <label for="last-name">Antiguedad: </label>
+    <input id="last-name" type="text" formControlName="antiguedad">
+    <label for="last-name">Beqca: </label>
+    <input id="last-name" type="text" formControlName="beca">
+    <button type="submit" [disabled]="!alumnoForm.valid">Submit</button>
+  </form>
+
+<hr/>
+<p>Los datos que cambian estan el el componente formulario</p>
+<p><p>{{alumnoForm.value | json}} </p>
+
+<p>{{alumnoForm.status }} </p>
+
+<div>
+  <ul>
+    <li > Control nombre {{(alumnoForm.controls.nombre.status=="VALID")?'Correcto':'Invalido'}}</li>
+    <li> Control beca {{(alumnoForm.controls.beca.status=="VALID")?'Correcto':'Invalido'}}</li>
+  </ul>
+</div>
+
+<button (click) ="loadReg()">FAKE load</button>
+
+
+

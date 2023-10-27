@@ -1,0 +1,30 @@
+<h1>hola mundo</h1>
+<p>Este es el componente principal</p>
+<p>Prueba {{ aContadores | json }}</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th *ngFor="let contador of aContadores" >{{contador.title}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td *ngFor="let contador of aContadores" >
+        <app-contador [id]="contador.id" [valor]="contador.inicio"  [parentMessage]="title" (messageEvent)="receiveMessage($event)"></app-contador>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td *ngFor="let contador of aContadores" >
+        <button (click)="delElem(contador.id)" >borra</button>
+      </td>
+    </tr>
+    
+  </tfoot>
+</table>
+<hr/>
+
+<textarea rows="30" cols="100" value="{{aux}}"></textarea>
+

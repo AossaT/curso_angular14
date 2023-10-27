@@ -1,0 +1,22 @@
+{
+  "alumnos": [
+    {
+      "id": 3,
+      "nombre": "Alumno 1 con id 3 ",
+      "antiguedad": "15/10/2023",
+      "beca": 1263.25
+    },
+    {
+      "nombre": "Alumno 22",
+      "antiguedad": "08/03/2022",
+      "beca": "123456",
+      "id": 22
+    },
+    {
+      "id": 45,
+      "nombre": "Alumno 3 id 45",
+      "antiguedad": "08/03/1967",
+      "beca": 0
+    }
+  ]
+}

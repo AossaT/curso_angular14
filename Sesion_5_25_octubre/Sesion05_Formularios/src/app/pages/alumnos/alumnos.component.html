@@ -1,0 +1,10 @@
+<p>Aqui va el listado de alumnos</p>
+
+<p>¿ Alumnos ? {{oServicio.alumnos | json}}</p>
+
+<ul>
+    <li *ngFor="let alumno of oServicio.alumnos">
+       <a routerLink="/alumnos/{{alumno.id}}" >{{alumno.nombre}} </a> 
+    </li>
+</ul>
+

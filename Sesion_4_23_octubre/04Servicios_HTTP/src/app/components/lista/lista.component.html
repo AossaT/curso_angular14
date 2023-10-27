@@ -1,0 +1,18 @@
+<div>
+    <p>Nuestra Lista de componentes </p>
+    
+    <p>Mayusculas {{lMay}} </p>
+    <button (click)="loadSync()">Test Sync</button>
+    
+    <p *ngIf="MsgError!=''" [ngClass]="'danger'">{{MsgError}}</p>
+    <ul>
+        <li *ngFor="let alumno of myAlumnos  ">{{ (lMay == true )? (alumno.nombre  | uppercase) :alumno.nombre }}  </li>
+    </ul>
+    
+</div>
+
+
+<!--
+    <li *ngFor="let alumno of alumnos | async ">{{ (lMay == true )? (alumno.nombre  | uppercase) :alumno.nombre }}  </li>
+        <li *ngFor="let alumno of servicioCurso.allAlumnos()">{{ (lMay == true )? (alumno.nombre  | uppercase) :alumno.nombre }}  </li>
+-->

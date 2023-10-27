@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "compila":"npx tsc hola.ts",
+    "ejecuta":"npx ts-node hola.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
